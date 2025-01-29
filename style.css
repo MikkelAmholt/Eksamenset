@@ -12,6 +12,11 @@ main{
 .flex-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+button{
+    padding: 15px 30px;
 }
 
 h1{
