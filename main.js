@@ -1,0 +1,3 @@
+function TjekPers(antal){
+    
+}
