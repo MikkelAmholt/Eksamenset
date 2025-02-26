@@ -1,3 +1,10 @@
+function myFunction() {
+}
+
+
+var number = "123";
+document.getElementById("antalpersoner").innerHTML = number;
+
 function TjekPers(antal){
     if(antal==1 || antal==2){
 
