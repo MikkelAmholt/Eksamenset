@@ -2,17 +2,14 @@ function myFunction() {
 }
 
 
-var number = "123";
-document.getElementById("antalpersoner").innerHTML = number;
+var number = "0";
 
-function TjekPers(antal){
-    if(antal==1 || antal==2){
-
-    }
-    if(antal==3 || antal==4){
-
-    }
-    if(antal==5 || antal==6){
-        
-    }
+function tjekPers(antal){
+   
+   number = antal;
+   document.getElementById("antalpersoner").innerHTML = number;
+   
 }
+function test(){
+    alert("You chose " + number);
+}    
