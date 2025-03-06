@@ -3,6 +3,7 @@ function myFunction() {
 
 
 var number = "0";
+var time = "00:00";
 
 function tjekPers(antal){
    
@@ -11,5 +12,5 @@ function tjekPers(antal){
    
 }
 function test(){
-    alert("You chose " + number);
+    alert("You chose " + number + " at " + time);
 }    
