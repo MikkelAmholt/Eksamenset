@@ -11,6 +11,12 @@ function tjekPers(antal){
    document.getElementById("antalpersoner").innerHTML = number;
    
 }
+function tjektid(tid){
+    time  = tid;
+    document.getElementById("tidspukt").innerHTML = time;
+
+
+}
 function test(){
     alert("You chose " + number + " at " + time);
 }    
