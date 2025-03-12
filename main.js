@@ -12,8 +12,8 @@ function tjektid(tid) {
 }
 
 function valg() {
-    if (number != 0 && time != "00:00") {
-        // Send antal personer via URL til vælgbord.html
+    if (number != 0 && time != "00:00") { 
+        window.location.href="/bookbord/vælgbord.html";
     } else {
         alert("Vælg venligst antal personer og tidspunkt");
     }
