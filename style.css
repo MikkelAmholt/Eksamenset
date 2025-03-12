@@ -98,3 +98,11 @@ h1{
     color: rgb(133, 123, 78);
     transition: all 0.3s ease-in-out; 
 }
+caption {
+  font-family: "Poppins", sans-serif; /* Skift skrifttype */
+  font-size: 20px; /* Gør skriften større */
+  font-weight: bold; /* Gør teksten fed */
+  color: rgb(133, 123, 78); /* Skift farve */
+  padding: 10px; /* Tilføj afstand rundt om teksten */
+  text-transform: uppercase; /* Gør teksten store bogstaver */
+}
