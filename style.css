@@ -13,7 +13,7 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 .tilbage {
-    margin-bottom: 30px; /* Øger afstanden mellem knappen og main */
+    margin-bottom: 30px; 
 }
 
 .flex-container {
@@ -44,7 +44,7 @@ button:hover {
 h1{
    text-align: center; 
 }
-/* style til dropdown*/
+
 .dropbtn {
     background-color: #4CAF50;
     color: white;
@@ -84,3 +84,17 @@ h1{
   .dropdown:hover .dropbtn {
     background-color: #3e8e41;
   }
+  #antalpersoner, #tidspukt {
+    font-family: "Poppins", sans-serif; 
+    font-size: 20px; 
+    font-weight: bold; 
+    color: rgb(133, 123, 78); 
+    transition: all 0.3s ease-in-out;
+  }
+  label, #antalpersoner, #tidspukt {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(133, 123, 78);
+    transition: all 0.3s ease-in-out; 
+}
