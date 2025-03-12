@@ -1,3 +1,11 @@
+/* Sikrer at hele siden bruger Poppins */
+body {
+  font-family: "Poppins", sans-serif;  
+  font-size: 18px;
+  color: rgb(133, 123, 78);
+  background-color: wheat;
+  padding: 20px;
+}
 body {
     background-color: wheat;
     padding: 20px;
