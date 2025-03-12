@@ -1,24 +1,20 @@
-function myFunction() {
+var number = 0; // Antal personer valgt
+var time = "00:00"; // Valgt tidspunkt
+
+function tjekPers(antal) {
+    number = antal;
+    document.getElementById("antalpersoner").innerHTML = number;
 }
 
-var number = "0";
-var time = "00:00";
-
-function tjekPers(antal){
-   number = antal;
-   document.getElementById("antalpersoner").innerHTML = number;
-   
-}
-function tjektid(tid){
-    time  = tid;
+function tjektid(tid) {
+    time = tid;
     document.getElementById("tidspukt").innerHTML = time;
-
 }
 
-function valg(){
-    if(number != "0" && time != "00:00"){
-        window.location.href="/bookbord/vælgbord.html";
+function valg() {
+    if (number != 0 && time != "00:00") {
+        // Send antal personer via URL til vælgbord.html
     } else {
-        alert("Pleace select party size and arrival time");
+        alert("Vælg venligst antal personer og tidspunkt");
     }
-}    
+} 

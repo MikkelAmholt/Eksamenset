@@ -1,7 +1,7 @@
 {
-    "bord": [
-      { "id": 1, "pladser": 2, "reservationer": [] },
-      { "id": 2, "pladser": 4, "reservationer": [] },
-      { "id": 3, "pladser": 6, "reservationer": [] }
-    ]
-  }
+  "bord": [
+    { "id": 1, "pladser": 2, "reservationer": [] },
+    { "id": 2, "pladser": 4, "reservationer": [] },
+    { "id": 3, "pladser": 6, "reservationer": [] }
+  ]
+}
