@@ -1,7 +1,16 @@
 {
   "bord": [
     { "id": 1, "pladser": 2, "reservationer": [] },
-    { "id": 2, "pladser": 4, "reservationer": [] },
-    { "id": 3, "pladser": 6, "reservationer": [] }
+    { "id": 2, "pladser": 2, "reservationer": [] },
+    { "id": 3, "pladser": 2, "reservationer": [] },
+    { "id": 4, "pladser": 2, "reservationer": [] },
+
+    { "id": 5, "pladser": 4, "reservationer": [] },
+    { "id": 6, "pladser": 4, "reservationer": [] },
+    { "id": 7, "pladser": 4, "reservationer": [] },
+    { "id": 8, "pladser": 4, "reservationer": [] },
+
+    { "id": 9, "pladser": 6, "reservationer": [] },
+    { "id": 10, "pladser": 6, "reservationer": [] }
   ]
 }
