@@ -4,11 +4,21 @@ var time = "00:00"; // Valgt tidspunkt
 function tjekPers(antal) {
     number = antal;
     document.getElementById("antalpersoner").innerHTML = number;
+    if (number != 0 && time != "00:00") { 
+        visknap(number);
+    }else{
+
+    }
 }
 
 function tjektid(tid) {
     time = tid;
     document.getElementById("tidspukt").innerHTML = time;
+    if (number != 0 && time != "00:00") { 
+        visknap(number);
+    }else{
+        
+    }
 }
 
 function valg() {
@@ -16,7 +26,6 @@ function valg() {
     if (number != 0 && time != "00:00") { 
         localStorage.setItem("number", number);
         /*window.location.href="/bookbord/vælgbord.html";*/
-        visknap(number);
 
     } else {
         alert("Vælg venligst antal personer og tidspunkt");
