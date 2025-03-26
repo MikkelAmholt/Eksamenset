@@ -11,6 +11,20 @@ const handler = async (req: Request): Promise<Response> => {
       headers: new Headers({ "Location": "/Main.html" }),
     });
   }
+  
+
+    if (req.method === "POST" && url.pathname === "/reserve") {
+        const { navn, telefon, bordId, tid } = await req.json();
+        let data = await loadTables();
+
+        let bord = data.bord.find(b => b.id === parseInt(bordId, 10));
+        if (!bord) return new Response("Bord ikke fundet", { status: 400 });
+
+        bord.reservationer.push({ navn, telefon, tid });
+        await saveTables(data);
+
+        return new Response(JSON.stringify({ message: "Reservation bekræftet!" }));
+    } 
 
   try {
     return await serveFile(req, filePath);

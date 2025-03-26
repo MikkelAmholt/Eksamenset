@@ -58,6 +58,7 @@ function visknap(number){
 
 }
 
+
 function skjulknap(){
     document.getElementById("k1").classList.add("hidden");
     document.getElementById("k2").classList.add("hidden");
@@ -71,3 +72,39 @@ function skjulknap(){
     document.getElementById("k10").classList.add("hidden");
 }
 
+function valg() {
+    alert("den virker");
+    const navn = document.getElementById("navn").value;
+    const telefon = document.getElementById("telefon").value;
+    const bordId = localStorage.getItem("valgtBord");
+
+    if (!number || time === "00:00" || !navn || !telefon || !bordId) {
+        alert("Udfyld alle felter og vælg et bord.");
+        return;
+    }
+
+    fetch("/reserve", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ navn, telefon, bordId, tid: time })
+    })
+    .then(response => response.json())
+    .then(data => alert(data.message))
+    .catch(error => console.error("Fejl:", error));
+}
+
+document.addEventListener("DOMContentLoaded", async function() {
+    const response = await fetch("/bookbord/bord.JSON");
+    const data = await response.json();
+    const container = document.querySelector(".borde2, .borde4, .borde6");
+
+    data.bord.forEach(bord => {
+        let button = document.getElementById(`k${bord.id}`);
+        if (button) {
+            button.onclick = () => {
+                localStorage.setItem("valgtBord", bord.id);
+                alert(`Bord ${bord.id} valgt.`);
+            };
+        }
+    });
+});
