@@ -1,1 +1,14 @@
-{"bord":{"1":{"pladser":2,"reservationer":[]},"2":{"pladser":2,"reservationer":[]},"3":{"pladser":2,"reservationer":[]},"4":{"pladser":2,"reservationer":[]},"5":{"pladser":4,"reservationer":[]},"6":{"pladser":4,"reservationer":[{"navn":"sas","telefon":"asas"}]},"7":{"pladser":4,"reservationer":[{"navn":"nafio n","telefon":"12345678","tid":"13:00","antal":"4"},{"navn":"nafio n","telefon":"12345678","tid":"13:00","antal":"4"},{"navn":"nrg","telefon":"12345678","tid":"14:30","antal":"3"}]},"8":{"pladser":4,"reservationer":[]},"9":{"pladser":6,"reservationer":[]},"10":{"pladser":6,"reservationer":[{"navn":"Mads","telefon":"22002022","tid":"13:00","antal":"5"}]}}}
+{
+  "bord": {
+    "1": { "pladser": 2, "reservationer": [] },
+    "2": { "pladser": 2, "reservationer": [] },
+    "3": { "pladser": 2, "reservationer": [] },
+    "4": { "pladser": 2, "reservationer": [] },
+    "5": { "pladser": 4, "reservationer": [] },
+    "6": { "pladser": 4, "reservationer": [] },
+    "7": { "pladser": 4, "reservationer": [] },
+    "8": { "pladser": 4, "reservationer": [] },
+    "9": { "pladser": 6, "reservationer": [] },
+    "10": { "pladser": 6, "reservationer": [] }
+  }
+}

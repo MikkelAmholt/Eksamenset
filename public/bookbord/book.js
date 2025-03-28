@@ -83,24 +83,26 @@ function valg() {
       method: "POST",
       body: formData,
     })
-      .then(response => response.json())
-      .then(data => console.log("Success:", data))
-      .catch(error => console.error("Error:", error));
-  }
-  
+    window.location.href = "/done"
 
-document.addEventListener("DOMContentLoaded", async function () {
-  const response = await fetch("/bookbord/bord.JSON");
-  const data = await response.json();
-  const container = document.querySelector(".borde2, .borde4, .borde6");
 
-  data.bord.forEach((bord) => {
-    let button = document.getElementById(`k${bord.id}`);
-    if (button) {
-      button.onclick = () => {
-        localStorage.setItem("valgtBord", bord.id);
-        console.log(`Bord ${bord.id} valgt.`);
-      };
-    }
-  });
-});
+}
+
+function slet(){
+    console.log("den virker");
+
+    const formData = new FormData();
+    const bordId = localStorage.getItem("valgtBord");
+    const tid = time;
+
+    formData.set("bordId", bordId);
+    formData.set("tid", tid);
+
+    console.log("Sending data:", Object.fromEntries(formData));
+
+    fetch("/api/delete_booking", {
+        method: "POST",
+        body: formData,
+      })
+    window.location.href = "/done"
+}

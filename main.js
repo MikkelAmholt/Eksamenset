@@ -8,6 +8,27 @@ Deno.serve(async (req) => {
     return new Response(file);
   }
 
+
+  if(pathname == "/api/delete_booking") {
+    const formData = await req.formData();
+
+    const bordId = formData.get("bordId");
+    const tid = formData.get("tid");
+    console.log("delte>",bordId,tid);
+
+    const file = Deno.readTextFileSync("db.json")
+    const data = JSON.parse(file)
+
+    data.bord[bordId].reservationer = data.bord[bordId].reservationer.filter(reservation => reservation.tid !== tid);
+
+    Deno.writeTextFileSync("db.json", JSON.stringify(data))
+
+    return new Response(null)
+
+
+
+  }
+
   if (pathname == '/api/booking') {
     const formData = await req.formData();
     
@@ -24,8 +45,7 @@ Deno.serve(async (req) => {
     data.bord[bordId].reservationer.push({"navn": navn, "telefon": telefon, "tid": tid, "antal": antal})
 
     Deno.writeTextFileSync("db.json", JSON.stringify(data))
-
-    return Response.redirect("/Færdig/Index.html");
+    return new Response(null)
   }
 
   return serveDir(req, {
@@ -33,3 +53,5 @@ Deno.serve(async (req) => {
     showIndex: true,
   });
 });
+
+
