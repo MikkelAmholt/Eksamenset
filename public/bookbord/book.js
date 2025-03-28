@@ -66,11 +66,15 @@ function valg() {
     console.log("den virker");
     const navn = document.getElementById("navn").value;
     const telefon = document.getElementById("telefon").value;
+    const tid = time;
+    const antal = number;
     const bordId = localStorage.getItem("valgtBord");
   
     const formData = new FormData();
     formData.set("navn", navn);
     formData.set("telefon", telefon);
+    formData.set("tid", tid);
+    formData.set("antal", antal);
     formData.set("bordId", bordId);
   
     console.log("Sending data:", Object.fromEntries(formData));
