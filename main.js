@@ -24,9 +24,6 @@ Deno.serve(async (req) => {
     Deno.writeTextFileSync("db.json", JSON.stringify(data))
 
     return new Response(null)
-
-
-
   }
 
   if (pathname == '/api/booking') {
