@@ -20,15 +20,6 @@ function tjektid(tid) {
   }
 }
 
-function valg() {
-  if (number != 0 && time != "00:00") {
-    localStorage.setItem("number", number);
-    /*window.location.href="/bookbord/vælgbord.html";*/
-  } else {
-    console.log("Vælg venligst antal personer og tidspunkt");
-  }
-}
-
 function visknap(number) {
   skjulknap();
   /*console.log("virker stadig");*/
@@ -64,6 +55,7 @@ function skjulknap() {
 
 function valg() {
     console.log("den virker");
+    if (number != 0 && time != "00:00") {
     const navn = document.getElementById("navn").value;
     const telefon = document.getElementById("telefon").value;
     const tid = time;
@@ -84,12 +76,14 @@ function valg() {
       body: formData,
     })
     window.location.href = "/done"
-
-
+  } else {
+    alert("Vælg venligst antal personer og tidspunkt");
+  }
 }
 
 function slet(){
     console.log("den virker");
+    if (number != 0 && time != "00:00") {
 
     const formData = new FormData();
     const bordId = localStorage.getItem("valgtBord");
@@ -105,4 +99,7 @@ function slet(){
         body: formData,
       })
     window.location.href = "/done"
+    } else {
+        alert("Vælg venligst antal personer og tidspunkt");
+    }
 }
