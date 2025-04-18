@@ -46,7 +46,6 @@ button {
     transition: background-color 0.3s ease; 
 }
 
-
 .hidden {
   display: none;
 }
@@ -112,10 +111,10 @@ h1{
     transition: all 0.3s ease-in-out; 
 }
 caption {
-  font-family: "Poppins", sans-serif; /* Skift skrifttype */
-  font-size: 20px; /* Gør skriften større */
-  font-weight: bold; /* Gør teksten fed */
-  color: rgb(133, 123, 78); /* Skift farve */
-  padding: 10px; /* Tilføj afstand rundt om teksten */
-  text-transform: uppercase; /* Gør teksten store bogstaver */
+  font-family: "Poppins", sans-serif;
+  font-size: 20px; 
+  font-weight: bold; 
+  color: rgb(133, 123, 78);
+  padding: 10px; 
+  text-transform: uppercase; 
 }
