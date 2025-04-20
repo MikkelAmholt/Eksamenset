@@ -7,7 +7,7 @@ Deno.serve(async (req) => {
     const file = Deno.readTextFileSync("db.json");
     const data = JSON.parse(file);
 
-    return new Response(JSON.stringify(data, null, 4), {  // Formatteret JSON
+    return new Response(JSON.stringify(data, null, 4), {  // Formatteret JSON, så man kan læse det
       headers: { "Content-Type": "application/json" }
     });
   }
@@ -26,7 +26,7 @@ Deno.serve(async (req) => {
 
     Deno.writeTextFileSync("db.json", JSON.stringify(data, null, 4));
 
-    return new Response(JSON.stringify(data, null, 4), { // Returnerer opdateret JSON
+    return new Response(JSON.stringify(data, null, 4), { // Returnerer opdateret JSON så man kan se det i browseren under /api/bookings
       headers: { "Content-Type": "application/json" }
     });
   }

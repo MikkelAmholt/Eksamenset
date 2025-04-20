@@ -6,20 +6,7 @@
         },
         "2": {
             "pladser": 2,
-            "reservationer": [
-                {
-                    "navn": "fghn",
-                    "telefon": "wer",
-                    "tid": "11:30",
-                    "antal": "2"
-                },
-                {
-                    "navn": "defrgdf",
-                    "telefon": "ewreg",
-                    "tid": "16:30",
-                    "antal": "6"
-                }
-            ]
+            "reservationer": []
         },
         "3": {
             "pladser": 2,
@@ -27,14 +14,7 @@
         },
         "4": {
             "pladser": 2,
-            "reservationer": [
-                {
-                    "navn": "dfgb",
-                    "telefon": "asd",
-                    "tid": "12:00",
-                    "antal": "2"
-                }
-            ]
+            "reservationer": []
         },
         "5": {
             "pladser": 4,
